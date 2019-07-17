@@ -1,1 +1,9 @@
-<p>post-list-item works!</p>
+
+<li [ngClass]="{'list-group-item' : true,
+'list-group-item-success' :postItem.like==0,
+'list-group-item-danger' :postItem.like<0
+}">
+  <h4> title {{postItem.title}}</h4>
+  <div> content {{postItem.content}}</div>
+  <div> likeNumber{{postItem.like}}  Date de création  {{postItem.creationDate | date : 'short'}}</div>
+</li>
